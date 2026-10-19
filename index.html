@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The 2030 Agenda, Explained: What's Documented</title>
+<style>
+:root{--bg:#f7f5f0;--ink:#1c1c1a;--muted:#67655e;--line:#d4cfc3;--card:#fff;--accent:#1f5c7a;--doc:#2d7a4f;--part:#b7791f;--claim:#b03a2e;--tag:#ebe7dc}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121417;--ink:#e9e6df;--muted:#9b9a93;--line:#34363d;--card:#1b1e24;--accent:#6fb3d2;--doc:#6fcf97;--part:#f2c46d;--claim:#ef8073;--tag:#262a31}}
+:root[data-theme="dark"]{--bg:#121417;--ink:#e9e6df;--muted:#9b9a93;--line:#34363d;--card:#1b1e24;--accent:#6fb3d2;--doc:#6fcf97;--part:#f2c46d;--claim:#ef8073;--tag:#262a31}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.6}
+.sans{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:var(--accent);z-index:20}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.25rem}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+.kicker{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-family:system-ui,sans-serif}
+h1{font-size:clamp(2.1rem,6vw,3.6rem);line-height:1.08;margin:.4rem 0 1rem}
+h2{font-size:clamp(1.5rem,4vw,2.2rem);margin:.2rem 0 .8rem;line-height:1.2}
+p{margin:.6rem 0}
+.muted{color:var(--muted)}
+.hero{padding:5rem 0 3rem}
+.lede{font-size:1.15rem;max-width:44rem}
+.pill{display:inline-block;font-family:system-ui,sans-serif;font-size:.78rem;padding:.2rem .6rem;border-radius:999px;background:var(--tag);margin:.2rem .3rem .2rem 0}
+.dot{display:inline-block;width:.7rem;height:.7rem;border-radius:50%;margin-right:.35rem;vertical-align:middle}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.3rem}
+.card h3{margin:.1rem 0 .4rem;font-size:1.05rem;font-family:system-ui,sans-serif}
+.quote{border-left:3px solid var(--accent);padding:.2rem 0 .2rem 1rem;color:var(--muted);font-style:italic;margin:.8rem 0}
+svg{width:100%;height:auto;display:block}
+.svgcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem;margin:1.2rem 0}
+.caption{font-family:system-ui,sans-serif;font-size:.8rem;color:var(--muted);margin-top:.5rem}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+.bars{display:grid;gap:.9rem;margin-top:1rem}
+.bar{font-family:system-ui,sans-serif}
+.bar .lbl{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:.25rem}
+.bar .track{height:14px;border-radius:7px;background:var(--tag);overflow:hidden}
+.bar .fill{height:100%;border-radius:7px;width:0;transition:width 1.2s ease}
+.flow{display:grid;gap:.5rem;margin-top:1rem}
+.step{display:grid;grid-template-columns:44px 1fr;gap:.8rem;align-items:stretch}
+.num{background:var(--accent);color:var(--bg);display:flex;align-items:center;justify-content:center;border-radius:10px;font-family:system-ui,sans-serif;font-weight:700}
+.step .card{padding:.8rem 1rem}
+.arrowdown{text-align:center;color:var(--muted);font-family:system-ui,sans-serif;line-height:.6;font-size:1.2rem;margin-left:44px}
+.sources li{margin:.45rem 0;font-family:system-ui,sans-serif;font-size:.9rem}
+.sources a{color:var(--accent);word-break:break-word}
+.legend{display:flex;flex-wrap:wrap;gap:1rem;font-family:system-ui,sans-serif;font-size:.85rem;margin-top:.6rem}
+footer{padding:2.5rem 0 4rem;font-family:system-ui,sans-serif;font-size:.85rem;color:var(--muted);border-top:1px solid var(--line)}
+.insight{font-size:clamp(1.15rem,2.6vw,1.45rem);line-height:1.4;border-left:4px solid var(--part);padding:.2rem 0 .2rem 1rem;margin:1.6rem 0;max-width:40rem}
+.lever p{font-size:.97rem}
+.lever .k{font-family:system-ui,sans-serif;font-size:.78rem;color:var(--muted);margin:.7rem 0 .1rem;display:block}
+.pill.doc{background:color-mix(in srgb,var(--doc) 22%,transparent)}
+.pill.part{background:color-mix(in srgb,var(--part) 25%,transparent)}
+.pill.claim{background:color-mix(in srgb,var(--claim) 22%,transparent)}
+.brakes{display:grid;gap:.5rem;margin-top:1rem;font-family:system-ui,sans-serif;font-size:.9rem}
+.brow{display:grid;grid-template-columns:1.1fr 1.3fr 1.3fr;gap:.8rem;padding:.7rem .9rem;background:var(--card);border:1px solid var(--line);border-radius:10px}
+.brow.head{background:transparent;border:none;color:var(--muted);font-size:.8rem;padding:.2rem .9rem}
+.brow b{font-weight:600}
+.brow.four{grid-template-columns:1fr 1.2fr 1.2fr 1.2fr}
+.key{display:grid;grid-template-columns:1fr 1fr;gap:1rem;font-family:system-ui,sans-serif;font-size:.88rem;margin-top:.8rem}
+.key ol{margin:.3rem 0 0;padding-left:1.2rem}.key li{margin:.3rem 0}
+.key h4{margin:0;font-size:.9rem}
+@media (max-width:700px){.brow,.brow.four{grid-template-columns:1fr}.brow.head{display:none}.key{grid-template-columns:1fr}}
+@media (max-width:700px){.grid2{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<div class="wrap hero">
+  <div class="kicker">A source-checked explainer</div>
+  <h1>The "2030 Agenda": what's written down, and what's a leap</h1>
+  <p class="lede">Over fifty years, the United Nations and its partners produced a series of real, public documents about land, cities, consumption, money and identity. Some people read them as a single hidden plan to control everyone. This page follows the paper trail, marks where the evidence stops, and shows where the leap is made.</p>
+  <p class="lede">New in this version: we stop asking “is there a secret plan?” and ask a sharper question. If every government wants a little more reach, what tools does it actually have, and what has stopped it from using them?</p>
+  <div>
+    <span class="pill">1976 to 2030</span><span class="pill">Public documents</span><span class="pill">Claims checked</span><span class="pill">Updated Oct 2026: the control toolkit</span>
+  </div>
+</div>
+
+<section class="wrap">
+  <div class="kicker">Part 1</div>
+  <h2>What the documents actually say</h2>
+  <p>Most of the goals sound uncontroversial when read on their own. The question is what they're meant to do and how they'd be enforced.</p>
+  <div class="grid2" style="margin-top:1rem">
+    <div class="card reveal"><h3>Habitat I (1976)</h3><p>The Vancouver Declaration said "the use and tenure of land should be subject to public control because of its limited supply." It also called for recapturing land-value increases that come from public investment.</p><div class="caption">UN Habitat I background, un.org</div></div>
+    <div class="card reveal"><h3>Agenda 21 (1992)</h3><p>Adopted at the Rio Earth Summit. It is a non-binding action plan covering poverty, consumption, cities, farming, energy and water. Countries were asked to adopt their own local versions.</p><div class="caption">Rio Earth Summit documents, UN</div></div>
+    <div class="card reveal"><h3>Agenda 2030 (2015)</h3><p>17 Sustainable Development Goals and 169 targets, adopted by all UN members. Target 16.9 reads: "legal identity for all, including birth registration, by 2030."</p><div class="caption">UN Legal Identity Agenda, unstats.un.org</div></div>
+    <div class="card reveal"><h3>The WEF "8 Predictions" (2016)</h3><p>A forecast video that summarized a personal essay by Danish politician Ida Auken, "Welcome to 2030: I Own Nothing, Have No Privacy and Life Has Never Been Better." The WEF has said the essay is a scenario, not a stated goal.</p><div class="caption">WEF, Nov. 2016; PolitiFact, 2023</div></div>
+  </div>
+  <div class="quote">"Legal identity for all, including birth registration, by 2030." UN Agenda 2030, Target 16.9</div>
+  <p class="muted">Documented fact: the target exists. Also documented: the UN's own framing is about birth registration and proof of identity. Linking it to digital money or surveillance is an inference that the documents don't make.</p>
+</section>
+
+<section class="wrap">
+  <div class="kicker">Part 2</div>
+  <h2>The timeline, from start to now</h2>
+  <p>Each event is placed where it happened. The color shows how strong the evidence is for the claim it's usually used to support.</p>
+
+  <div class="svgcard reveal">
+    <svg viewBox="0 0 900 300" role="img" aria-label="Timeline 1968 to 2030">
+      <line x1="40" y1="150" x2="860" y2="150" stroke="currentColor" stroke-opacity=".3" stroke-width="3"/>
+      <!-- scale: 1968 at x=40, 2030 at x=860 -->
+      <g font-family="system-ui,sans-serif" font-size="12" fill="currentColor">
+        <circle cx="40" cy="150" r="7" fill="#9b9a93"/><text x="40" y="180" text-anchor="middle">1968</text><text x="40" y="128" text-anchor="middle">Universe 25 mouse study</text>
+        <circle cx="88" cy="150" r="7" fill="#2d7a4f"/><text x="88" y="98" text-anchor="middle">1976</text><text x="88" y="200" text-anchor="middle">UN Habitat I, Vancouver</text>
+        <circle cx="206" cy="150" r="7" fill="#2d7a4f"/><text x="206" y="128" text-anchor="middle">1978</text><text x="206" y="200" text-anchor="middle">UN-Habitat agency</text>
+        <circle cx="355" cy="150" r="7" fill="#2d7a4f"/><text x="355" y="98" text-anchor="middle">1992</text><text x="355" y="200" text-anchor="middle">Agenda 21, Rio</text>
+        <circle cx="402" cy="150" r="7" fill="#2d7a4f"/><text x="402" y="128" text-anchor="middle">1993</text><text x="402" y="180" text-anchor="middle">US sustainable development council</text>
+        <circle cx="460" cy="150" r="7" fill="#2d7a4f"/><text x="460" y="98" text-anchor="middle">2004</text><text x="460" y="200" text-anchor="middle">ESG report (UN Global Compact)</text>
+        <circle cx="596" cy="150" r="7" fill="#2d7a4f"/><text x="596" y="128" text-anchor="middle">2015</text><text x="596" y="180" text-anchor="middle">Agenda 2030 adopted</text>
+        <circle cx="638" cy="150" r="7" fill="#b7791f"/><text x="638" y="98" text-anchor="middle">2016</text><text x="638" y="200" text-anchor="middle">WEF "8 Predictions" video</text>
+        <circle cx="700" cy="150" r="7" fill="#2d7a4f"/><text x="700" y="128" text-anchor="middle">2019</text><text x="700" y="180" text-anchor="middle">WEF and UN partnership</text>
+        <circle cx="744" cy="150" r="7" fill="#b7791f"/><text x="744" y="98" text-anchor="middle">2020</text><text x="744" y="200" text-anchor="middle">"Great Reset" launched</text>
+        <circle cx="805" cy="150" r="7" fill="#2d7a4f"/><text x="805" y="128" text-anchor="middle">Aug 2025</text><text x="805" y="180" text-anchor="middle">Fink named interim WEF co-chair</text>
+        <circle cx="838" cy="150" r="9" fill="#1f5c7a"/><text x="838" y="98" text-anchor="middle">Sep 2026</text><text x="838" y="268" text-anchor="middle">ECB Pontes live</text>
+        <circle cx="860" cy="150" r="7" fill="none" stroke="#6fb3d2" stroke-width="3"/><text x="860" y="232" text-anchor="middle">2030</text>
+      </g>
+    </svg>
+    <div class="legend">
+      <span><span class="dot" style="background:#2d7a4f"></span>Documented</span>
+      <span><span class="dot" style="background:#b7791f"></span>Real, but often misread</span>
+      <span><span class="dot" style="background:#9b9a93"></span>Research, with limits</span>
+      <span><span class="dot" style="background:#1f5c7a"></span>Current</span>
+    </div>
+    <div class="caption">Spacing is not to scale; positions show order. Sources in Part 6.</div>
+  </div>
+
+  <div class="card reveal" style="margin-top:1rem">
+    <h3>Where the 2030 deadline stands</h3>
+    <svg viewBox="0 0 700 110" role="img" aria-label="Progress from 1976 to 2030">
+      <rect x="20" y="40" width="660" height="22" rx="11" fill="currentColor" fill-opacity=".12"/>
+      <rect x="20" y="40" width="623" height="22" rx="11" fill="#1f5c7a"/>
+      <line x1="643" y1="30" x2="643" y2="72" stroke="#1c1c1a" stroke-width="2"/>
+      <text x="643" y="26" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="currentColor">Today: Oct 2026</text>
+      <text x="20" y="90" font-family="system-ui,sans-serif" font-size="12" fill="currentColor">1976 (Habitat I)</text>
+      <text x="680" y="90" text-anchor="end" font-family="system-ui,sans-serif" font-size="12" fill="currentColor">2030 (target)</text>
+      <text x="350" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="currentColor">About 94% of the calendar is used up. Time elapsed is not the same as goals met.</text>
+    </svg>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="kicker">Part 3</div>
+  <h2>Checking the big claims</h2>
+  <p>Each bar shows how much of a claim the public record supports. A longer green bar means better documentation. Interpretation is shown in amber or red.</p>
+
+  <div class="bars">
+    <div class="bar reveal">
+      <div class="lbl"><span>Land was named as a public-control issue in 1976</span><span>Documented</span></div>
+      <div class="track"><div class="fill" data-w="95" style="background:var(--doc)"></div></div>
+    </div>
+    <div class="bar reveal">
+      <div class="lbl"><span>Agenda 21 and Agenda 2030 exist and cover cities, consumption and money</span><span>Documented</span></div>
+      <div class="track"><div class="fill" data-w="95" style="background:var(--doc)"></div></div>
+    </div>
+    <div class="bar reveal">
+      <div class="lbl"><span>Legal identity for all is a stated 2030 target</span><span>Documented</span></div>
+      <div class="track"><div class="fill" data-w="95" style="background:var(--doc)"></div></div>
+    </div>
+    <div class="bar reveal">
+      <div class="lbl"><span>ESG scoring pushes companies toward UN goals</span><span>Partly documented</span></div>
+      <div class="track"><div class="fill" data-w="60" style="background:var(--part)"></div></div>
+    </div>
+    <div class="bar reveal">
+      <div class="lbl"><span>BlackRock uses fund votes to push policy goals</span><span>Partly documented</span></div>
+      <div class="track"><div class="fill" data-w="55" style="background:var(--part)"></div></div>
+    </div>
+    <div class="bar reveal">
+      <div class="lbl"><span>Larry Fink is interim WEF co-chair (since Aug 2025)</span><span>Documented</span></div>
+      <div class="track"><div class="fill" data-w="95" style="background:var(--doc)"></div></div>
+    </div>
+    <div class="bar reveal">
+      <div class="lbl"><span>WEF says "you will own nothing" is its goal</span><span>Not supported</span></div>
+      <div class="track"><div class="fill" data-w="8" style="background:var(--claim)"></div></div>
+    </div>
+    <div class="bar reveal">
+      <div class="lbl"><span>The Great Reset is a plan to take people's possessions</span><span>Not supported</span></div>
+      <div class="track"><div class="fill" data-w="8" style="background:var(--claim)"></div></div>
+    </div>
+    <div class="bar reveal">
+      <div class="lbl"><span>All of the above is one coordinated plan to control people</span><span>Interpretation, not shown in the documents</span></div>
+      <div class="track"><div class="fill" data-w="20" style="background:var(--claim)"></div></div>
+    </div>
+  </div>
+  <p class="caption">Scores are qualitative judgments about how well the public record supports each statement, not statistics.</p>
+</section>
+
+<section class="wrap">
+  <div class="kicker">Part 4</div>
+  <h2>How the story is built, step by step</h2>
+  <p>This is the common chain the claims rely on. Each link is checked against what the documents show.</p>
+  <div class="flow">
+    <div class="step reveal"><div class="num">1</div><div class="card"><b>UN agreements set goals.</b> Habitat, Agenda 21 and Agenda 2030 are real and public. <span class="pill">Solid</span></div></div>
+    <div class="arrowdown">↓</div>
+    <div class="step reveal"><div class="num">2</div><div class="card"><b>Governments adopt them locally.</b> Local plans and national councils did follow Agenda 21. These are non-binding, so adoption was voluntary. <span class="pill">Solid</span></div></div>
+    <div class="arrowdown">↓</div>
+    <div class="step reveal"><div class="num">3</div><div class="card"><b>Investors reward compliance.</b> ESG scoring took shape from 2004, but its results and effects are debated, and ESG has become politically contested. <span class="pill">Partly supported</span></div></div>
+    <div class="arrowdown">↓</div>
+    <div class="step reveal"><div class="num">4</div><div class="card"><b>Big institutions coordinate.</b> The WEF partnered with the UN in 2019. Fink became interim co-chair in 2025, and Schwab stepped back from active leadership. <span class="pill">Solid on facts</span></div></div>
+    <div class="arrowdown">↓</div>
+    <div class="step reveal"><div class="num">5</div><div class="card"><b>Money and identity change.</b> The ECB's Pontes went live 21 Sept 2026, but only for banks settling wholesale transactions. The consumer digital euro is still in legislation. <span class="pill">Narrower than claimed</span></div></div>
+    <div class="arrowdown">↓</div>
+    <div class="step reveal"><div class="num">6</div><div class="card"><b>Outcomes are predicted to follow.</b> Population decline, dependence on the state, or a planned collapse. The documents forecast trends and goals, not a secret schedule of harms. <span class="pill">Claim without evidence</span></div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="kicker">Part 5</div>
+  <h2>A different lens: no villain required</h2>
+  <p>On 14 November 1979, Jimmy Carter declared a national emergency to freeze Iranian government assets during the hostage crisis. The hostages came home in 1981. The emergency didn’t. It’s still in effect today, 47 years later, the oldest of dozens still on the books.</p>
+  <p>That small fact is a good doorway into the question you asked. Let’s take it as a working assumption that governments and bureaucracies tend to want more power, and that they usually believe their reasons are good ones. We don’t need a secret plan for that. We just need ordinary people inside institutions, each solving the problem in front of them.</p>
+  <p>Economic historian Robert Higgs gave this a name in his 1987 book <i>Crisis and Leviathan</i>: the ratchet effect. A crisis hits, government powers jump, and when the crisis fades they shrink back, but rarely all the way. Think of a socket wrench. It turns freely one way and clicks to stop it slipping back.</p>
+  <div class="svgcard reveal">
+    <svg viewBox="0 0 900 270" role="img" aria-label="Illustrative ratchet: state power steps up with each crisis and only partly recedes">
+      <line x1="40" y1="230" x2="870" y2="230" stroke="currentColor" stroke-opacity=".35"/>
+      <line x1="40" y1="212" x2="870" y2="212" stroke="currentColor" stroke-opacity=".25" stroke-dasharray="4 5"/>
+      <path d="M40 212 H100 L108 168 L132 180 H428 L436 122 L462 138 H532 L540 102 L566 114 H711 L719 58 L739 84 L745 74 L770 88 H860" fill="none" stroke="var(--accent)" stroke-width="3.5" stroke-linejoin="round"/>
+      <g font-family="system-ui,sans-serif" font-size="12" fill="currentColor">
+        <text x="104" y="156" text-anchor="middle">1979</text><text x="104" y="142" text-anchor="middle" fill-opacity=".7">Iran emergency</text>
+        <text x="434" y="110" text-anchor="middle">2001</text><text x="434" y="96" text-anchor="middle" fill-opacity=".7">9/11 powers</text>
+        <text x="540" y="90" text-anchor="middle">2008</text><text x="540" y="76" text-anchor="middle" fill-opacity=".7">FISA 702</text>
+        <text x="718" y="46" text-anchor="middle">2020–22</text><text x="718" y="32" text-anchor="middle" fill-opacity=".7">Pandemic, convoy</text>
+        <text x="860" y="205" text-anchor="end" fill-opacity=".7">Where we started</text>
+        <text x="40" y="252">1975</text><text x="860" y="252" text-anchor="end">2026</text>
+      </g>
+    </svg>
+    <div class="caption">Illustrative shape of Higgs’s idea, not a measurement. The dates mark real events discussed below; the heights are not data.</div>
+  </div>
+  <p class="insight">It doesn’t take a conspiracy. It takes a crisis, a good reason, and a sunset clause nobody enforces.</p>
+  <p>A fair warning about the lens itself. Higgs’s idea is influential, but it’s debated. Critics, including economists at Econlib, point out that Sweden built a large state without fighting either world war, and that spending spikes from crises often fade on their own. So the ratchet seems real for some powers, especially security and emergency powers, and weaker for others. Keep that in mind as we look at the tools.</p>
+  <p class="muted">Lord Acton put the worry more bluntly in 1887: “Power tends to corrupt.” The rest of this page tests how much of that worry the record actually supports.</p>
+</section>
+
+<section class="wrap">
+  <div class="kicker">Part 6</div>
+  <h2>The toolkit: six levers, all on paper</h2>
+  <p>Here’s the twist that might surprise you. The UN documents in Part 1 have no teeth. Target 16.9 is a wish. The levers that can actually touch your money, your messages and your movement are written by national parliaments and agencies, in plain view, usually for reasons most people would nod along to. That’s what makes them worth watching.</p>
+  <p class="insight">The UN writes wishes. National parliaments write the teeth.</p>
+  <div class="grid2" style="margin-top:1rem">
+
+    <div class="card lever reveal"><h3>1. Emergency powers</h3>
+      <span class="k">The justification</span><p>Crises need speed that normal lawmaking can’t give.</p>
+      <span class="k">What’s documented</span><p>Roughly 90 US national emergencies have been declared since the 1976 law, and more than half were still active in 2025. In Canada, the 2022 Emergencies Act let the government freeze bank accounts of convoy protesters and donors without a court order.</p>
+      <span class="k">Where the brake held</span><p>Canada’s Federal Court of Appeal ruled unanimously in January 2026 that the invocation was unlawful and the account freezes breached Charter rights; Ottawa is seeking a Supreme Court appeal. In the US, the Supreme Court ruled 6–3 in February 2026 that emergency economic powers don’t let a president impose tariffs.</p>
+      <span class="pill doc">Documented</span><span class="pill part">Checked by courts, years later</span></div>
+
+    <div class="card lever reveal"><h3>2. Surveillance that outlives its sunset</h3>
+      <span class="k">The justification</span><p>Catching foreign terrorists and spies.</p>
+      <span class="k">What’s documented</span><p>FISA Section 702 lets agencies collect foreigners’ communications abroad, and Americans on the other end get swept in. Searches of that data for Americans don’t need a warrant. Congress stalled on renewal through spring 2026, and reporting by EPIC says the June 12 deadline passed without agreement.</p>
+      <span class="k">The quiet detail</span><p>A March 2026 surveillance court certification lets collection continue to about March 2027 regardless. So a “lapse” in the law didn’t switch the program off. That’s the ratchet in miniature.</p>
+      <span class="pill doc">Documented</span><span class="pill claim">Brake weak so far</span></div>
+
+    <div class="card lever reveal"><h3>3. Buying what you can’t seize</h3>
+      <span class="k">The justification</span><p>If anyone can buy it, it’s public, so no warrant is needed.</p>
+      <span class="k">What’s documented</span><p>A 2022 report by advisers to the Director of National Intelligence, declassified in 2023, admitted that agencies buy location, browsing and vehicle data from brokers. It said this data can now replicate the results of intrusive surveillance, and that the government believes it can track millions of phones this way without a warrant.</p>
+      <span class="k">Why it matters</span><p>The report itself warned about “mission creep,” data collected for one purpose being reused for another. That’s the government’s own advisers naming the exact worry.</p>
+      <span class="pill doc">Documented</span><span class="pill claim">No federal law closing it</span></div>
+
+    <div class="card lever reveal"><h3>4. The money rails</h3>
+      <span class="k">The justification</span><p>Money laundering, tax evasion, terrorist finance, and payment sovereignty.</p>
+      <span class="k">What’s documented</span><p>From 10 July 2027, EU businesses can’t take cash payments above €10,000, with ID checks from €3,000, and countries may go lower (France and Spain already cap at €1,000). Cash between private people stays legal. The digital euro passed the European Parliament’s negotiating vote 416 to 169 in July 2026, with a per-person holding limit (around €3,000 has been discussed) and a target launch of 2029.</p>
+      <span class="k">Where the brake held</span><p>Parliament’s text says the digital euro would not be programmable and must work offline with privacy by design. Those protections still have to survive negotiation with member states. In the US, the 2025 “fair banking” order removed “reputation risk” from bank supervision after complaints that regulators pressured banks to drop lawful customers.</p>
+      <span class="pill doc">Documented</span><span class="pill part">Final rules not settled</span></div>
+
+    <div class="card lever reveal"><h3>5. Identity</h3>
+      <span class="k">The justification</span><p>Stopping illegal work and fraud, and making services easier.</p>
+      <span class="k">What’s documented</span><p>In September 2025 the UK government announced a digital ID that every worker would need. Civil liberties groups warned of “function creep,” where a voluntary ID slowly becomes required for daily life.</p>
+      <span class="k">Where the brake held</span><p>After public backlash, the government reversed in January 2026: the new ID will be optional for citizens. Digital right-to-work checks are still planned to be mandatory by 2029, but other documents like passports can be used.</p>
+      <span class="pill doc">Documented</span><span class="pill doc">Public pushback worked</span></div>
+
+    <div class="card lever reveal"><h3>6. Reading private messages</h3>
+      <span class="k">The justification</span><p>Protecting children from sexual abuse online. Few causes are harder to argue with, which is exactly why critics watch it closely.</p>
+      <span class="k">What’s documented</span><p>The EU’s 2022 proposal, nicknamed “Chat Control,” would have required scanning messages, including encrypted ones, on people’s devices. Figures cited in the EU debate showed only about 1 in 5 automated reports in 2022 involved illegal content.</p>
+      <span class="k">Where the brake held</span><p>Germany refused, and member states dropped mandatory scanning in November 2025. Talks with Parliament collapsed in June 2026. Critics argue the remaining “risk” duties still nudge platforms to scan. Reports conflict on the temporary voluntary-scanning rules, so treat this one as unsettled.</p>
+      <span class="pill doc">Documented</span><span class="pill part">Stalled, not dead</span></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="kicker">Part 7</div>
+  <h2>How a power grows, step by step</h2>
+  <p>Line the six levers up and the same five steps keep showing up. None of them needs bad intent. Each one feels reasonable from the inside.</p>
+  <div class="flow">
+    <div class="step reveal"><div class="num">1</div><div class="card"><b>A real problem.</b> Terrorism, laundering, child abuse, illegal work. These are genuine, which is why the case is persuasive. <span class="pill doc">Documented</span></div></div>
+    <div class="arrowdown">↓</div>
+    <div class="step reveal"><div class="num">2</div><div class="card"><b>A tool built wide “just in case.”</b> Scan every message, not just suspects’. Check every worker, not just foreign ones. Collect in bulk, sort later. <span class="pill doc">Documented</span></div></div>
+    <div class="arrowdown">↓</div>
+    <div class="step reveal"><div class="num">3</div><div class="card"><b>Temporary becomes routine.</b> Emergencies get renewed every year. Sunset dates arrive and the program keeps running. <span class="pill doc">Documented</span></div></div>
+    <div class="arrowdown">↓</div>
+    <div class="step reveal"><div class="num">4</div><div class="card"><b>New uses appear.</b> Data gathered for one purpose gets used for another, the “mission creep” the intelligence community’s own advisers warned about. Canada turned emergency finance powers on protest donors. <span class="pill part">Documented in specific cases</span></div></div>
+    <div class="arrowdown">↓</div>
+    <div class="step reveal"><div class="num">5</div><div class="card"><b>A new normal.</b> The next crisis starts from the higher baseline. Whether this adds up to deliberate control or just institutional drift is where the evidence stops and interpretation begins. <span class="pill claim">Interpretation</span></div></div>
+  </div>
+
+  <h2 style="margin-top:2.6rem">Where the brakes held, and where they didn’t</h2>
+  <p>If the ratchet were the whole story, every row below would read “expanded.” It doesn’t. Notice who did the pushing on each side.</p>
+  <div class="brakes">
+    <div class="brow head"><span>Lever</span><span>Who pushed for more power</span><span>What pushed back</span></div>
+    <div class="brow reveal"><b>Account freezing</b><span>Canada’s Liberal government, 2022</span><span>Two federal courts ruled it unlawful (2024, 2026)</span></div>
+    <div class="brow reveal"><b>Emergency tariffs</b><span>Trump administration, 2025</span><span>Supreme Court, 6–3 (Feb 2026)</span></div>
+    <div class="brow reveal"><b>Mandatory digital ID</b><span>UK Labour government, 2025</span><span>Public backlash; U-turn (Jan 2026)</span></div>
+    <div class="brow reveal"><b>Message scanning</b><span>European Commission, 2022</span><span>Germany, then Parliament; talks collapsed (2026)</span></div>
+    <div class="brow reveal"><b>Warrantless 702 searches</b><span>Administrations of both parties</span><span>Reform push in Congress; program continues anyway</span></div>
+    <div class="brow reveal"><b>Data broker purchases</b><span>US intelligence agencies</span><span>Little so far; no federal privacy law</span></div>
+  </div>
+  <p class="insight">The pattern is real. But it’s rival governments reaching for the same tools, not one hand moving all of them.</p>
+  <p>That’s worth sitting with. Canadian Liberals, a Republican White House, British Labour and Brussels technocrats don’t coordinate, and they’d be insulted by the suggestion. Yet each reached for a version of the same lever. That seems to fit the incentives lens better than the single-plan story from Part 4. It also suggests the brakes work best when ordinary people know the lever exists before the crisis arrives.</p>
+  <p class="muted">What we don’t know yet: the final digital euro text, the outcome of Chat Control, whether Section 702 gets a warrant requirement, and how Canada’s Supreme Court rules. Any of these could tip the picture either way.</p>
+</section>
+
+<section class="wrap">
+  <div class="kicker">Part 8</div>
+  <h2>Why institutions rot from the inside: the life cycle</h2>
+  <p>On the night of 27 January 1986, engineers at the company that built the Space Shuttle’s boosters argued against launching in the cold. The launch went ahead the next morning. Seventy-three seconds later, Challenger was gone. Sociologist Diane Vaughan spent years studying how that happened, and her answer wasn’t a villain. It was a system where, as she later told investigators, following the normal rules and procedures took precedence.</p>
+  <p>Parts 5 to 7 asked how power grows. This part asks a quieter question: what happens to an organization after it has the power? Writer Charles Hugh Smith (the <i>Of Two Minds</i> blog) has sketched an answer he says applies to private companies and public agencies alike.</p>
+
+  <h2 style="font-size:1.35rem;margin-top:2rem">Smith’s model, in plain terms</h2>
+  <p>Smith’s core idea is that the purpose that inspired an organization’s founders is slowly replaced by the self-interest of the people running it. The people who would sacrifice for the mission either quit in disgust or get pushed aside as threats. Think of a garden hose that slowly kinks. Water still flows, the faucet’s still on, but less and less reaches the plants.</p>
+  <p>He lists several ways systems become fragile. Condensed into our own words, the big ones are these. Process starts to matter more than results. Insiders hide the decay behind public relations and paperwork so complex that nobody is accountable. Safety buffers get cut as “wasteful.” And everyone assumes money can fix it, when money can’t buy trust or competence.</p>
+
+  <div class="svgcard reveal">
+    <svg viewBox="0 0 900 360" role="img" aria-label="Life cycle of an organization, with NASA and Microsoft placed on it">
+      <path d="M60 290 C160 120,240 62,330 62 C420 62,500 120,600 170" fill="none" stroke="currentColor" stroke-opacity=".55" stroke-width="3"/>
+      <path d="M600 170 C680 190,760 255,850 300" fill="none" stroke="var(--claim)" stroke-width="3"/>
+      <path d="M600 170 C680 160,740 95,850 72" fill="none" stroke="var(--doc)" stroke-width="3" stroke-dasharray="7 6"/>
+      <g font-family="system-ui,sans-serif" font-size="12" fill="currentColor">
+        <text x="110" y="330" text-anchor="middle" font-weight="600">Mission</text>
+        <text x="250" y="330" text-anchor="middle" font-weight="600">Growth</text>
+        <text x="410" y="330" text-anchor="middle" font-weight="600">Process</text>
+        <text x="555" y="330" text-anchor="middle" font-weight="600">Insulation</text>
+        <text x="740" y="330" text-anchor="middle" font-weight="600">The fork</text>
+        <text x="110" y="346" text-anchor="middle" fill-opacity=".65">purpose drives</text>
+        <text x="250" y="346" text-anchor="middle" fill-opacity=".65">results, scale</text>
+        <text x="410" y="346" text-anchor="middle" fill-opacity=".65">rules over results</text>
+        <text x="555" y="346" text-anchor="middle" fill-opacity=".65">insiders, narrative</text>
+        <text x="740" y="346" text-anchor="middle" fill-opacity=".65">implode or renew</text>
+        <text x="846" y="318" text-anchor="end" fill="var(--claim)">Implosion</text>
+        <text x="846" y="56" text-anchor="end" fill="var(--doc)">Renewal</text>
+      </g>
+      <g font-family="system-ui,sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+        <circle cx="215" cy="96" r="13" fill="var(--accent)"/><text x="215" y="100" fill="var(--bg)">N1</text>
+        <circle cx="465" cy="94" r="13" fill="var(--accent)"/><text x="465" y="98" fill="var(--bg)">N2</text>
+        <circle cx="545" cy="138" r="13" fill="var(--accent)"/><text x="545" y="142" fill="var(--bg)">N3</text>
+        <circle cx="730" cy="222" r="13" fill="var(--accent)"/><text x="730" y="226" fill="var(--bg)">N4</text>
+        <circle cx="300" cy="52" r="13" fill="var(--part)"/><text x="300" y="56" fill="var(--bg)">M1</text>
+        <circle cx="350" cy="52" r="13" fill="var(--part)"/><text x="350" y="56" fill="var(--bg)">M2</text>
+        <circle cx="585" cy="178" r="13" fill="var(--part)"/><text x="585" y="182" fill="var(--bg)">M3</text>
+        <circle cx="690" cy="140" r="13" fill="var(--part)"/><text x="690" y="144" fill="var(--bg)">M4</text>
+        <circle cx="800" cy="80" r="13" fill="var(--part)"/><text x="800" y="84" fill="var(--bg)">M5</text>
+      </g>
+    </svg>
+    <div class="key">
+      <div><h4 style="color:var(--accent)">NASA human spaceflight</h4><ol>
+        <li><b>N1, 1961–69:</b> Apollo. Mission-driven, results-first.</li>
+        <li><b>N2, 1986:</b> Challenger. Known booster damage had become “normal.”</li>
+        <li><b>N3, 2003:</b> Columbia. Investigators blamed the culture as much as the foam.</li>
+        <li><b>N4, 2016–2026:</b> SLS. First launch about six years late, about $4.1B per flight.</li></ol></div>
+      <div><h4 style="color:var(--part)">Microsoft</h4><ol>
+        <li><b>M1, 1995:</b> About 95% of desktop computing.</li>
+        <li><b>M2, 2000:</b> World’s most valuable company, $510B.</li>
+        <li><b>M3, 2012:</b> “Lost decade.” Stack ranking, turf wars, value down to $249B.</li>
+        <li><b>M4, 2014:</b> Nadella era. Culture reset, forced ranking gone.</li>
+        <li><b>M5, 2019:</b> First $1 trillion valuation.</li></ol></div>
+    </div>
+    <div class="caption">Original diagram drawn for this page from the ideas in Smith’s writing, not a copy of his charts. The curve’s shape is illustrative. Where NASA and Microsoft sit on it is our interpretation, based on the dated events in the key. Smith’s model ends in implosion; the dashed renewal branch is our addition, because Microsoft shows it can happen.</div>
+  </div>
+
+  <h2 style="font-size:1.35rem;margin-top:2rem">NASA: the agency that built a moonshot in eight years</h2>
+  <p>Here’s the part that should sting a little. In 1961 NASA was asked to land people on the Moon, and it did so in 1969. That’s the Mission phase at full power: a clear goal, a deadline, and engineers who would sacrifice for it.</p>
+  <p>By 1986 the picture had shifted. Vaughan described how well-meaning managers came to accept repeated booster seal damage as normal, an “incremental descent into poor judgment.” She called it the normalization of deviance. Researchers later described the shift as NASA’s Apollo-era technical culture turning into a “culture of production.”</p>
+  <p>Seventeen years later, Columbia broke apart on re-entry. The investigation board found that the organizational causes of Challenger had never really been fixed. In its own words, NASA’s culture had as much to do with the accident as the foam that struck the wing. That’s Smith’s pattern almost exactly: a system that looks sturdy from outside while its ability to hear bad news quietly fails.</p>
+  <p>Then there’s the Space Launch System. NASA’s inspector general estimated in 2021 that each SLS and Orion launch costs about $4.1 billion. The first launch slipped from a December 2016 target to November 2022, and by Artemis II, more than $55 billion had been spent on the rocket, capsule and ground systems. Early estimates had put the operating cost per launch near $500 million. Congress kept funding it anyway, which looks a lot like the “money can fix it” stage.</p>
+  <p class="muted">To be fair to NASA: Artemis II did fly its crew on a lunar flyby in April 2026, and this is about human launch programs, not the whole agency. The question isn’t whether NASA can still do hard things. It’s what each hard thing now costs, and who pays when it slips.</p>
+
+  <h2 style="font-size:1.35rem;margin-top:2rem">Microsoft: the company that walked back from the edge</h2>
+  <p>In 1995 Microsoft ran about 95% of the world’s desktops. In December 2000 it was the most valuable company on Earth, worth $510 billion. Then something seemed to stall.</p>
+  <p>In 2012, Vanity Fair’s Kurt Eichenwald interviewed dozens of current and former employees. Every one of them, he wrote, named “stack ranking” as the most destructive process inside the company. Each team had to label a fixed share of people as poor performers no matter how good the team was. So people competed with each other instead of with Apple and Google. Talented people left. Microsoft had a phone operating system before the iPhone and still lost mobile. By June 2012 its value had fallen to $249 billion.</p>
+  <p>That’s Smith’s Insulation phase: the talented leave, turf wars grow, and the product keeps shipping, so things look fine from outside.</p>
+  <p>Then the fork. Forced ranking was dropped, and after Satya Nadella became CEO in 2014 he pushed a “growth mindset” culture. By November 2019 Microsoft hit a $1 trillion valuation, up about 200% from when he started.</p>
+  <p class="muted">A fair caveat: Ballmer rejected the “lost decade” label, and the company kept earning large profits through it. Stock value is one measure, not the whole story.</p>
+
+  <h2 style="font-size:1.35rem;margin-top:2rem">Smith’s warning signs, checked against both</h2>
+  <div class="brakes">
+    <div class="brow four head"><span>Warning sign</span><span>NASA (Challenger to SLS)</span><span>Microsoft (2000–13)</span><span>Microsoft (after 2014)</span></div>
+    <div class="brow four reveal"><b>Process over results</b><span>Following procedure took precedence over warnings (Vaughan)</span><span>Forced ranking rewarded internal politics</span><span>Ranking curve dropped</span></div>
+    <div class="brow four reveal"><b>Decay hidden from view</b><span>Sense of risk faded for 17 years (Columbia board)</span><span>Flagship sales hid lost ground in mobile</span><span>Bet openly on new markets</span></div>
+    <div class="brow four reveal"><b>The competent leave</b><span>Engineers’ concerns didn’t reach decision-makers</span><span>Stack ranking “drove out” staff (Eichenwald)</span><span>Culture reset to keep people</span></div>
+    <div class="brow four reveal"><b>Money as the fix</b><span>$55B+ before Artemis II, funding protected</span><span>Revenue kept flowing, masking the stall</span><span>Pain showed up in stock value first</span></div>
+  </div>
+  <p class="caption">Qualitative judgments built from the sources listed. The rows paraphrase Smith’s fragility points.</p>
+
+  <p class="insight">Organizations renew when failure costs the people inside. They ossify when failure costs someone else.</p>
+  <p>That line is our interpretation, not Smith’s, but the two stories seem to support it. When Microsoft stalled, its shareholders and employees felt it, and rivals took its customers. When a NASA rocket runs years late and billions over, the bill goes to taxpayers and the program usually survives. One organization had a feedback loop with teeth. The other mostly didn’t.</p>
+  <p>And here’s how it links back to the rest of this page. Smith argues that late-stage bureaucracies spend more and more effort managing the narrative and protecting insiders. An institution in that phase seems likely to want exactly the tools in Part 6: more data, more reach, fewer people asking questions. Not because anyone plotted it, but because control feels safer than accountability once the mission has faded.</p>
+  <p class="muted">What we don’t know: whether Smith’s model predicts anything better than common sense. It’s a framework from an independent writer, not a tested theory, and he has often expected collapse sooner than it arrived. Use it as a lens for asking good questions, not as a forecast.</p>
+</section>
+
+<section class="wrap">
+  <div class="kicker">Part 9</div>
+  <h2>The sensor web: how the toolkit got eyes and ears</h2>
+  <p>Picture an ordinary Tuesday. You back out of the driveway, pass a gray box on a pole at the corner, check the weather on your phone at a red light, and stop for coffee. Nothing unusual happened. But depending on where you live, that drive might have produced a photo of your car and its bumper sticker, a timestamped location point auctioned to ad buyers, and a record a federal analyst could search later without asking a judge.</p>
+  <p>Parts 5 to 8 were about power and the institutions that hold it. This part is about the plumbing. Most of it wasn’t built by governments at all. It was built to sell things, then rented out.</p>
+  <p class="insight">Nobody had to build a surveillance state from scratch. It was cheaper to buy one off the shelf.</p>
+
+  <div class="svgcard reveal">
+    <svg viewBox="0 0 900 430" role="img" aria-label="Five-layer diagram of the surveillance stack, from sensors to influence, with a feedback loop">
+      <g font-family="system-ui,sans-serif" font-size="13" fill="currentColor">
+        <rect x="40" y="20" width="760" height="62" rx="10" fill="var(--accent)" fill-opacity=".14" stroke="var(--accent)"/>
+        <text x="60" y="47" font-weight="700">1. Sensors</text><text x="60" y="67" fill-opacity=".75">Plate readers, street and police cameras, phone radios, tire sensors, apps</text>
+        <rect x="40" y="100" width="760" height="62" rx="10" fill="var(--accent)" fill-opacity=".10" stroke="var(--accent)"/>
+        <text x="60" y="127" font-weight="700">2. Brokers</text><text x="60" y="147" fill-opacity=".75">Ad auctions and data brokers bundle and resell location and behavior</text>
+        <rect x="40" y="180" width="760" height="62" rx="10" fill="var(--part)" fill-opacity=".14" stroke="var(--part)"/>
+        <text x="60" y="207" font-weight="700">3. Warehouse</text><text x="60" y="227" fill-opacity=".75">Data centers and fusion platforms join records across agencies and vendors</text>
+        <rect x="40" y="260" width="760" height="62" rx="10" fill="var(--part)" fill-opacity=".10" stroke="var(--part)"/>
+        <text x="60" y="287" font-weight="700">4. Query</text><text x="60" y="307" fill-opacity=".75">An analyst searches a person, plate, face or place, often with no warrant</text>
+        <rect x="40" y="340" width="760" height="62" rx="10" fill="var(--claim)" fill-opacity=".12" stroke="var(--claim)"/>
+        <text x="60" y="367" font-weight="700">5. Influence</text><text x="60" y="387" fill-opacity=".75">Feeds, ads and planted stories shape what people see, feel and do next</text>
+      </g>
+      <g stroke="currentColor" stroke-opacity=".5" stroke-width="2" fill="none">
+        <path d="M420 82 V100"/><path d="M420 162 V180"/><path d="M420 242 V260"/><path d="M420 322 V340"/>
+        <path d="M800 371 H850 V51 H806" stroke="var(--claim)" stroke-opacity=".8" stroke-dasharray="6 5"/>
+      </g>
+      <path d="M806 51 l10 -6 v12 z" fill="var(--claim)"/>
+      <text x="862" y="215" font-family="system-ui,sans-serif" font-size="12" fill="var(--claim)" transform="rotate(90 862 215)" text-anchor="middle">behavior becomes new data</text>
+    </svg>
+    <div class="caption">Original diagram. Each layer is documented separately below. The loop on the right is the part that worries researchers most: what the system shows you changes what you do, which becomes more data. How strong that loop is remains debated.</div>
+  </div>
+
+  <div class="grid2" style="margin-top:1.4rem">
+
+    <div class="card lever reveal"><h3>Plate readers that read more than plates</h3>
+      <span class="k">What’s documented</span><p>Flock Safety, the biggest US vendor, has passed roughly 100,000 cameras. Its own sales material advertises a “Vehicle Fingerprint” that logs type, make, color, bumper stickers, decals and roof racks, so police can search for a car with no plate at all. Lawsuits and audits found federal agencies querying local data; one suit says San Francisco’s cameras were accessed by federal agencies 1.6 million times.</p>
+      <span class="k">Where the brake held</span><p>About 23 city councils voted to cancel, reject or switch off Flock cameras between January and mid-2026, and Politico counted more than 50 by August. Rhode Island paused new installs. Bills to cut federal funding were filed in Congress in October 2026.</p>
+      <span class="pill doc">Documented</span><span class="pill doc">Local pushback working</span></div>
+
+    <div class="card lever reveal"><h3>Radio signals as a fingerprint</h3>
+      <span class="k">What’s documented</span><p>Your car’s tire pressure sensors broadcast a fixed ID with no encryption. A 2026 study collected over six million of these signals from more than 20,000 cars with cheap radios and showed it could follow individual vehicles between receivers. Separately, ICE bought vans fitted with cell-site simulators in 2025, devices that pose as a cell tower so nearby phones reveal their identity and location.</p>
+      <span class="k">What isn’t shown</span><p>Some commentators claim plate readers already log phone Wi-Fi and Bluetooth IDs or tire signals alongside plates. We found no reliable evidence Flock does this. Treat it as a demonstrated capability, not a confirmed deployment.</p>
+      <span class="pill doc">Capability documented</span><span class="pill part">Mass use not shown</span></div>
+
+    <div class="card lever reveal"><h3>Faces, everywhere</h3>
+      <span class="k">What’s documented</span><p>ICE’s Mobile Fortify phone app checks a face against more than 200 million government images and keeps new scans for 15 years. DHS’s own privacy document admits it may capture US citizens. Agents have also used Clearview AI, which scraped more than 50 billion images from the open web. In the UK, a January 2026 white paper funds up to 50 live facial recognition vans across England and Wales. China is estimated to host more than half the world’s surveillance cameras.</p>
+      <span class="k">Accuracy problem</span><p>In one reported case, the app returned two different names for the same woman in a single stop.</p>
+      <span class="pill doc">Documented</span><span class="pill claim">Few legal limits in the US</span></div>
+
+    <div class="card lever reveal"><h3>The ad auction as a tracking network</h3>
+      <span class="k">What’s documented</span><p>Every time an ad loads, your phone can broadcast its location and device ID to bidders in milliseconds. Citizen Lab found that a tool called Webloc, sold by Penlink, repackages this ad data covering up to 500 million devices. ICE bought it in 2025, and an internal ICE legal analysis says it can be queried without a warrant.</p>
+      <span class="k">The open question</span><p>No court has squarely ruled whether buying ad-based location data needs a warrant. It’s the Part 6 “buy what you can’t seize” lever, now running on your weather app.</p>
+      <span class="pill doc">Documented</span><span class="pill claim">No brake yet</span></div>
+
+    <div class="card lever reveal"><h3>The warehouse: joining it all up</h3>
+      <span class="k">What’s documented</span><p>A March 2025 executive order told agencies to tear down “information silos” and share data. ICE hired Palantir under a $30 million contract to build ImmigrationOS, and the IRS signed a data-sharing deal with ICE over the objections of top IRS officials. Palantir also ran vaccine logistics for the Biden administration, so this isn’t one party’s tool.</p>
+      <span class="k">Why it matters</span><p>Each sensor alone is limited. Joined in one data center, they become a timeline of a life. Some Palantir engineers reportedly worried about exactly that.</p>
+      <span class="pill doc">Documented</span><span class="pill part">Court challenges ongoing</span></div>
+
+    <div class="card lever reveal"><h3>Feeds that tune your mood</h3>
+      <span class="k">What’s documented</span><p>In 2012, Facebook quietly altered the feeds of 689,003 users for a week to see if emotions spread. They did, though the measured effect was tiny. In March 2026, a Los Angeles jury found Meta and YouTube negligent for designing platforms that hooked a young user, awarding $6 million; both plan to appeal.</p>
+      <span class="k">The surprising counterpoint</span><p>The biggest test so far, run with Meta during the 2020 election, switched consenting users to a plain chronological feed for three months. What they saw changed a lot. Their political attitudes didn’t measurably change. Feeds clearly shape attention; whether they reshape beliefs is less clear than many assume.</p>
+      <span class="pill doc">Documented</span><span class="pill part">Effect size debated</span></div>
+
+    <div class="card lever reveal" style="grid-column:1/-1"><h3>Governments playing newsroom: psychological operations</h3>
+      <span class="k">What’s documented</span><p>This isn’t only something rivals do. Reuters found that from 2020 to 2021 the US military ran at least 300 fake accounts posing as Filipinos to spread doubt about China’s Sinovac vaccine during the pandemic, overriding objections from US diplomats; the Biden White House ended it in 2021. Russia’s “Pravda” network pumped out about 3.6 million articles in 2024 across roughly 150 domains, apparently to seed AI training data; NewsGuard found leading chatbots repeated its false claims about a third of the time. OpenAI has reported state-linked actors from Russia, China, Iran and Israel trying to use AI for influence campaigns.</p>
+      <span class="k">What it means for you</span><p>The newest target isn’t your feed. It’s the AI you ask for answers. If enough fake articles flood the web, a chatbot can repeat them in a calm, confident voice.</p>
+      <span class="pill doc">Documented</span><span class="pill part">Impact on people hard to measure</span></div>
+  </div>
+
+  <h2 style="font-size:1.35rem;margin-top:2.4rem">Where the brakes are, layer by layer</h2>
+  <div class="brakes">
+    <div class="brow head"><span>Layer</span><span>Expanding</span><span>Pushing back</span></div>
+    <div class="brow reveal"><b>Sensors</b><span>Plate readers, face scans, protest monitoring</span><span>City cancellations, state reviews, bills in Congress</span></div>
+    <div class="brow reveal"><b>Brokers</b><span>Ad-data tools sold to agencies</span><span>70+ lawmakers asked for an inspector general probe; no law yet</span></div>
+    <div class="brow reveal"><b>Warehouse</b><span>Cross-agency data merging</span><span>Lawsuits over IRS and Social Security data</span></div>
+    <div class="brow reveal"><b>Influence</b><span>Engagement-driven feeds, state info ops</span><span>Jury verdicts, platform takedowns, a White House ban on one op</span></div>
+  </div>
+
+  <p class="insight">A single camera sees a car. A thousand cameras plus an ad auction plus a data center see a life.</p>
+  <p>This is where the rest of the page clicks together. Part 5’s ratchet explains why these tools rarely get switched off. Part 8’s life cycle suggests why late-stage institutions reach for them. And Part 6’s “buy what you can’t seize” lever turns out to be the main road in. Still, the record cuts both ways. The biggest checks in 2026 came from city councils, juries and reporters, not from Washington, which seems to suggest that the most effective oversight right now is local and stubborn.</p>
+  <p class="muted">What we don’t know yet: whether courts will require warrants for bought data, how often face matches are wrong in the field, whether radio-signal tracking is in routine use anywhere, and how much feeds and influence campaigns actually change minds rather than just attention. The honest answer on that last one, for now, seems to be “less than feared, more than zero.”</p>
+</section>
+
+<section class="wrap">
+  <div class="kicker">Part 10</div>
+  <h2>A useful analogy: the mouse experiment</h2>
+  <p>John Calhoun's "Universe 25" (1968 to 1973) is often cited as proof that comfortable societies collapse from within. It's a real experiment, but it's a single study of crowded mice, and later researchers questioned how far its results apply to people.</p>
+  <div class="svgcard reveal">
+    <svg viewBox="0 0 700 260" role="img" aria-label="Illustrative population curve">
+      <line x1="50" y1="220" x2="670" y2="220" stroke="currentColor" stroke-opacity=".4"/>
+      <line x1="50" y1="20" x2="50" y2="220" stroke="currentColor" stroke-opacity=".4"/>
+      <path d="M50 210 C120 200,160 150,220 90 S330 40,380 45 S470 90,520 150 S600 200,660 215" fill="none" stroke="#b7791f" stroke-width="3"/>
+      <g font-family="system-ui,sans-serif" font-size="12" fill="currentColor">
+        <text x="50" y="240">Start (about 8 mice)</text>
+        <text x="380" y="30" text-anchor="middle">Peak (about 2,200)</text>
+        <text x="620" y="240" text-anchor="end">Last birth, then extinction</text>
+        <text x="10" y="120" transform="rotate(-90 10 120)" text-anchor="middle">Population</text>
+      </g>
+    </svg>
+    <div class="caption">Illustrative shape only, based on the commonly reported peak and collapse. Not a measured data series.</div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="kicker">Part 11</div>
+  <h2>Sources</h2>
+  <p class="muted">Each link is from the sources checked for this page. Read the originals before drawing conclusions.</p>
+  <ul class="sources">
+    <li>UN, Habitat I (Vancouver, 1976) background: <a href="https://www.un.org/en/node/89526">https://www.un.org/en/node/89526</a></li>
+    <li>Habitat I, Vancouver Declaration summary (Wikipedia): <a href="https://www.wikipedia.org/wiki/Habitat_I">https://www.wikipedia.org/wiki/Habitat_I</a></li>
+    <li>UN Legal Identity Agenda, Target 16.9: <a href="https://unstats.un.org/legal-identity-agenda">https://unstats.un.org/legal-identity-agenda</a></li>
+    <li>World Bank, SDG 16.9 metadata: <a href="https://worldbank.github.io/sdg-metadata/metadata/en/16-9-1">https://worldbank.github.io/sdg-metadata/metadata/en/16-9-1</a></li>
+    <li>WEF, "8 Predictions for the World in 2030" (Nov. 2016): <a href="https://www.weforum.org/agenda/2016/11/8-predictions-for-the-world-in-2030/">https://www.weforum.org/agenda/2016/11/8-predictions-for-the-world-in-2030/</a></li>
+    <li>PolitiFact, "elites are pushing the Great Reset" rating (2023): <a href="https://www.politifact.com/factchecks/2023/sep/28/instagram-posts/world-economic-forum-elites-are-pushing-the-great/">https://www.politifact.com/factchecks/2023/sep/28/instagram-posts/world-economic-forum-elites-are-pushing-the-great/</a></li>
+    <li>Logically Facts, fact-check of the WEF "own nothing" claim (2022): <a href="https://logicallyfacts.com/en/fact-check/false-a-2016-video-from-world-economic-forum-confirmed-that-it-would-have-people-own-nothing-and-keep-them-happy">https://logicallyfacts.com/en/fact-check/false-a-2016-video-from-world-economic-forum-confirmed-that-it-would-have-people-own-nothing-and-keep-them-happy</a></li>
+    <li>Axios, Fink at Davos 2026: <a href="https://www.axios.com/2026/01/19/davos-larry-fink-opening-remarks-blackrock">https://www.axios.com/2026/01/19/davos-larry-fink-opening-remarks-blackrock</a></li>
+    <li>ESG News, Fink and Hoffmann named interim WEF co-chairs (Aug 2025): <a href="https://esgnews.com/?p=37918">https://esgnews.com/?p=37918</a></li>
+    <li>WEF, Larry Fink author page (lists interim co-chair role): <a href="https://www.weforum.org/stories/authors/larry-fink/">https://www.weforum.org/stories/authors/larry-fink/</a></li>
+    <li>ECB Pontes coverage, go-live 21 Sept 2026: <a href="https://genfinity.io/2026/09/21/ecb-pontes-digital-euro-wholesale-platform-banks/">https://genfinity.io/2026/09/21/ecb-pontes-digital-euro-wholesale-platform-banks/</a></li>
+    <li>PostTrade360, ECB names first Pontes DLT operators: <a href="https://posttrade360.com/news/technology/ecb-names-first-pontes-dlt-operators/">https://posttrade360.com/news/technology/ecb-names-first-pontes-dlt-operators/</a></li>
+    <li>ECB digital euro overview: <a href="https://www.ecb.europa.eu">https://www.ecb.europa.eu</a></li>
+    <li>The Scientist, Universe 25 (Calhoun, 1968 to 1973): <a href="https://www.the-scientist.com/universe-25-1968-1973-69941">https://www.the-scientist.com/universe-25-1968-1973-69941</a></li>
+    <li>Crisis and Leviathan (Higgs, 1987), summary of the ratchet thesis: <a href="https://en.wikipedia.org/wiki/Crisis_and_Leviathan">https://en.wikipedia.org/wiki/Crisis_and_Leviathan</a></li>
+    <li>Econlib, debate on whether crises drive government growth (Sweden counterexample): <a href="https://www.econlib.org/archives/2014/04/cowen_and_crisi.html">https://www.econlib.org/archives/2014/04/cowen_and_crisi.html</a></li>
+    <li>Newsweek, national emergencies active in 2025 (oldest from 1979): <a href="https://newsweek.com/donald-trump-national-emergencies-how-many-10946698">https://newsweek.com/donald-trump-national-emergencies-how-many-10946698</a></li>
+    <li>Brennan Center data via Check Your Fact (Congress had never voted to end an emergency, 2019): <a href="https://checkyourfact.com/2019/01/09/fact-check-30-national-emergencies/">https://checkyourfact.com/2019/01/09/fact-check-30-national-emergencies/</a></li>
+    <li>Supreme Court IEEPA tariff ruling, 20 Feb 2026 (EY summary): <a href="https://taxnews.ey.com/news/2026-0486-us-supreme-court-rules-ieepa-does-not-authorize-presidents-to-impose-tariffs">https://taxnews.ey.com/news/2026-0486-us-supreme-court-rules-ieepa-does-not-authorize-presidents-to-impose-tariffs</a></li>
+    <li>Canadian Constitution Foundation, Federal Court of Appeal Emergencies Act decision: <a href="https://theccf.ca/federal-court-of-appeal-emergencies-act-decision-your-questions-answered/">https://theccf.ca/federal-court-of-appeal-emergencies-act-decision-your-questions-answered/</a></li>
+    <li>Canadian Press, Ottawa seeks Supreme Court appeal (Mar 2026): <a href="https://www.ckom.com/?p=1042791">https://www.ckom.com/?p=1042791</a></li>
+    <li>Brookings, Section 702 explained and the 2026 sunset: <a href="https://www.brookings.edu/articles/a-key-intelligence-law-expires-in-april-and-the-path-for-reauthorization-is-unclear">https://www.brookings.edu/articles/a-key-intelligence-law-expires-in-april-and-the-path-for-reauthorization-is-unclear</a></li>
+    <li>5 Calls, Section 702 vote timeline (Apr to Jun 2026): <a href="https://5calls.org/issue/fisa-section-702-fbi-surveillance/">https://5calls.org/issue/fisa-section-702-fbi-surveillance/</a></li>
+    <li>EPIC, Section 702 myth vs. reality (June 2026): <a href="https://epic.org/wp-content/uploads/2026/06/EPIC-FISA-Sec.-702-myth-vs.reality-one-pager.pdf">https://epic.org/wp-content/uploads/2026/06/EPIC-FISA-Sec.-702-myth-vs.reality-one-pager.pdf</a></li>
+    <li>Demand Progress, FISC certification through about March 2027: <a href="https://demandprogress.org/memo-the-april-20-fisa-deadline-is-fake/">https://demandprogress.org/memo-the-april-20-fisa-deadline-is-fake/</a></li>
+    <li>EPIC, ODNI report on commercially available information: <a href="https://epic.org/odni-report-on-intelligence-agencies-data-purchases-underscores-urgency-of-reform/">https://epic.org/odni-report-on-intelligence-agencies-data-purchases-underscores-urgency-of-reform/</a></li>
+    <li>Reason, ODNI report and “mission creep” warning: <a href="https://reason.com/2023/06/14/intelligence-services-evade-4th-amendment-by-paying-for-your-data/printer/">https://reason.com/2023/06/14/intelligence-services-evade-4th-amendment-by-paying-for-your-data/printer/</a></li>
+    <li>BDO Malta, EU Regulation 2024/1624 cash payment limit: <a href="https://www.bdo.com.mt/en-gb/news/news-in-2025/eu-regulation-on-cash-payment-limits">https://www.bdo.com.mt/en-gb/news/news-in-2025/eu-regulation-on-cash-payment-limits</a></li>
+    <li>Vienna.at, €3,000 ID-check threshold and private-cash exemption: <a href="https://www.vienna.at/?p=10025708">https://www.vienna.at/?p=10025708</a></li>
+    <li>Positive Money Europe, Parliament digital euro vote (9 July 2026): <a href="https://positivemoney.org/eu/update/eu-parliament-sends-digital-euro-into-final-negotiations/">https://positivemoney.org/eu/update/eu-parliament-sends-digital-euro-into-final-negotiations/</a></li>
+    <li>PPC Land, digital euro not programmable, offline mode: <a href="https://ppc.land/meps-cap-digital-euro-holdings-and-force-24-month-rollout-after-43-14-vote/">https://ppc.land/meps-cap-digital-euro-holdings-and-force-24-month-rollout-after-43-14-vote/</a></li>
+    <li>Digital euro holding cap and trilogue timeline: <a href="https://pasqualepillitteri.it/en/news/18560/digital-euro-3000-euro-cap-offline-2029">https://pasqualepillitteri.it/en/news/18560/digital-euro-3000-euro-cap-offline-2029</a></li>
+    <li>DLA Piper, “fair banking” executive order (Aug 2025): <a href="https://www.dlapiper.com/insights/publications/2025/08/executive-order-on-fair-banking">https://www.dlapiper.com/insights/publications/2025/08/executive-order-on-fair-banking</a></li>
+    <li>Full Fact, UK digital ID tracker: <a href="https://fullfact.org/government-tracker/digital-id/">https://fullfact.org/government-tracker/digital-id/</a></li>
+    <li>Lewis Silkin, UK digital ID consultation (Mar 2026): <a href="https://www.lewissilkin.com/insights/2026/03/23/uk-government-opens-consultation-on-digital-id-scheme-102mnlk">https://www.lewissilkin.com/insights/2026/03/23/uk-government-opens-consultation-on-digital-id-scheme-102mnlk</a></li>
+    <li>Fight Chat Control, timeline and status: <a href="https://fightchatcontrol.eu/chat-control-overview">https://fightchatcontrol.eu/chat-control-overview</a></li>
+    <li>EU Perspectives, Chat Control and false-positive figures: <a href="https://euperspectives.eu/2025/08/eu-chat-control-heads-for-a-decisive-vote/">https://euperspectives.eu/2025/08/eu-chat-control-heads-for-a-decisive-vote/</a></li>
+    <li>Charles Hugh Smith, “2020 Was a Snack, 2021 Is the Main Course” (fragility list and bureaucracy life cycle), republished by Mother Pelican: <a href="https://pelicanweb.org/solisustv17n02page17.html">https://pelicanweb.org/solisustv17n02page17.html</a></li>
+    <li>Charles Hugh Smith, Of Two Minds blog: <a href="https://www.oftwominds.com/blog.html">https://www.oftwominds.com/blog.html</a></li>
+    <li>Spaceflight Now, Diane Vaughan testimony to the Columbia board (2003): <a href="https://spaceflightnow.com/shuttle/sts107/030424hearing">https://spaceflightnow.com/shuttle/sts107/030424hearing</a></li>
+    <li>AIChE CCPS, key lessons from the Columbia report: <a href="https://www.aiche.org/ccps/self-evaluation-tool-key-lessons-columbia-shuttle-disaster">https://www.aiche.org/ccps/self-evaluation-tool-key-lessons-columbia-shuttle-disaster</a></li>
+    <li>Vaughan, “System Effects” (Challenger and Columbia organizational causes): <a href="https://raghavan.usc.edu/2020-fall-computing-and-global-change/vaughan.pdf">https://raghavan.usc.edu/2020-fall-computing-and-global-change/vaughan.pdf</a></li>
+    <li>NASA SP-2006-4702, organizational culture and “culture of production”: <a href="https://www.theblackvault.com/documents/space/nasa/sp-2006-4702-Section5.pdf">https://www.theblackvault.com/documents/space/nasa/sp-2006-4702-Section5.pdf</a></li>
+    <li>Portside, SLS cost, OIG audits and delays (Apr 2026): <a href="https://portside.org/2026-04-03/billions-over-moon-artemis-ii-worth-price-tag">https://portside.org/2026-04-03/billions-over-moon-artemis-ii-worth-price-tag</a></li>
+    <li>New Space Economy, early $500M per-launch estimate and Artemis II launch: <a href="https://newspaceeconomy.ca/2026/04/04/the-93-billion-question-is-the-artemis-program-worth-it/">https://newspaceeconomy.ca/2026/04/04/the-93-billion-question-is-the-artemis-program-worth-it/</a></li>
+    <li>Computerworld, summary of “Microsoft’s Lost Decade” (Vanity Fair, 2012): <a href="https://www.computerworld.com/?p=1372393">https://www.computerworld.com/?p=1372393</a></li>
+    <li>Macfilos, Microsoft market value $510B (2000) to $249B (2012): <a href="https://www.macfilos.com/2012/07/27/2012-7-27-vanity-fair-how-microsoft-lost-its-mojo-html/">https://www.macfilos.com/2012/07/27/2012-7-27-vanity-fair-how-microsoft-lost-its-mojo-html/</a></li>
+    <li>Motley Fool, Ballmer’s rebuttal to the “lost decade”: <a href="https://fool.com.au/2012/07/23/did-microsoft-experience-a-lost-decade">https://fool.com.au/2012/07/23/did-microsoft-experience-a-lost-decade</a></li>
+    <li>IUP case study, Microsoft culture shift and $1T valuation (2019): <a href="https://www.iupindia.in/1021/Organizational%20Behavior/Microsoft-Building-a-Collaborative.asp">https://www.iupindia.in/1021/Organizational%20Behavior/Microsoft-Building-a-Collaborative.asp</a></li>
+    <li>Washington Examiner, about 23 Flock cancellations in 2026: <a href="https://www.washingtonexaminer.com/policy/technology/4672621/flock-controversial-camera-contracts-canceled-23-states/">https://www.washingtonexaminer.com/policy/technology/4672621/flock-controversial-camera-contracts-canceled-23-states/</a></li>
+    <li>Yahoo News, Tlaib and Ocasio-Cortez Flock bills; Politico count of 50+ cancellations: <a href="https://www.yahoo.com/news/politics/articles/rashida-tlaib-bill-targets-flock-161656334.html">https://www.yahoo.com/news/politics/articles/rashida-tlaib-bill-targets-flock-161656334.html</a></li>
+    <li>Boston Globe, Rhode Island ALPR review (Oct 2026): <a href="https://bostonglobe.com/2026/10/19/metro/ri-flock-license-plate-cameras-review">https://bostonglobe.com/2026/10/19/metro/ri-flock-license-plate-cameras-review</a></li>
+    <li>Finding Flock, cancellation tracker and federal-access lawsuits: <a href="https://www.findingflock.com/learn/flock-contract-cancellations">https://www.findingflock.com/learn/flock-contract-cancellations</a></li>
+    <li>Flock sales presentation listing Vehicle Fingerprint attributes: <a href="https://www.internationaldriveorlando.com/editorFiles/Presentations/20230726%20DAB%20Flock%20Safety%20PP.pdf">https://www.internationaldriveorlando.com/editorFiles/Presentations/20230726%20DAB%20Flock%20Safety%20PP.pdf</a></li>
+    <li>Schneier on Security, Flock searches without plates (2026): <a href="https://www.schneier.com/blog/archives/2026/07/flock-cameras-can-surveil-cars-without-license-plates.html">https://www.schneier.com/blog/archives/2026/07/flock-cameras-can-surveil-cars-without-license-plates.html</a></li>
+    <li>Flock Safety, its own description of what cameras capture: <a href="https://www.flocksafety.com/blog/what-do-flock-cameras-actually-capture">https://www.flocksafety.com/blog/what-do-flock-cameras-actually-capture</a></li>
+    <li>EurekAlert / IMDEA Networks, tire sensor tracking study: <a href="https://www.eurekalert.org/news-releases/1117266">https://www.eurekalert.org/news-releases/1117266</a></li>
+    <li>Help Net Security, low-cost TPMS tracking: <a href="https://www.helpnetsecurity.com/2026/03/03/tires-sensor-car-tracking-research/">https://www.helpnetsecurity.com/2026/03/03/tires-sensor-car-tracking-research/</a></li>
+    <li>TechCrunch, ICE cell-site simulator vehicles: <a href="https://techcrunch.com/2025/10/08/heres-the-tech-powering-ices-deportation-crackdown/">https://techcrunch.com/2025/10/08/heres-the-tech-powering-ices-deportation-crackdown/</a></li>
+    <li>Biometric Update, Mobile Fortify 15-year retention and citizen scans: <a href="https://www.biometricupdate.com/202510/trump-administration-expands-facial-recognition-while-erasing-oversight-policy">https://www.biometricupdate.com/202510/trump-administration-expands-facial-recognition-while-erasing-oversight-policy</a></li>
+    <li>Biometric Update, facial recognition at protests and Clearview’s 50B images: <a href="https://www.biometricupdate.com/202602/ice-fbi-expand-facial-recognition-use-to-protest-investigations">https://www.biometricupdate.com/202602/ice-fbi-expand-facial-recognition-use-to-protest-investigations</a></li>
+    <li>Wikipedia, Mobile Fortify (two-names case): <a href="https://en.wikipedia.org/wiki/Mobile_Fortify">https://en.wikipedia.org/wiki/Mobile_Fortify</a></li>
+    <li>DWF, UK policing white paper and 50 LFR vans (Mar 2026): <a href="https://dwfgroup.com/en-ie/news-and-insights/insights/2026/3/policing-at-the-ai-frontier-facial-recognition-is-here-to-stay">https://dwfgroup.com/en-ie/news-and-insights/insights/2026/3/policing-at-the-ai-frontier-facial-recognition-is-here-to-stay</a></li>
+    <li>Fortune, China’s share of world surveillance cameras: <a href="https://fortune.com/2020/11/03/china-surveillance-system-backlash-worlds-largest">https://fortune.com/2020/11/03/china-surveillance-system-backlash-worlds-largest</a></li>
+    <li>Citizen Lab, analysis of Penlink’s Webloc: <a href="https://citizenlab.ca/research/analysis-of-penlinks-ad-based-geolocation-surveillance-tech/">https://citizenlab.ca/research/analysis-of-penlinks-ad-based-geolocation-surveillance-tech/</a></li>
+    <li>Newsweek, lawmakers seek probe of ICE location data: <a href="https://www.newsweek.com/ice-buying-americans-location-data-under-scrutiny-11627381">https://www.newsweek.com/ice-buying-americans-location-data-under-scrutiny-11627381</a></li>
+    <li>EFF, ICE surveillance purchases (Jan 2026): <a href="https://www.eff.org/deeplinks/2026/01/ice-going-surveillance-shopping-spree">https://www.eff.org/deeplinks/2026/01/ice-going-surveillance-shopping-spree</a></li>
+    <li>Business and Human Rights Centre, ICE warrantless-query legal analysis: <a href="https://www.business-humanrights.org/en/latest-news/penlink-named-as-one-of-the-tech-companies-allegedly-supporting-ices-deportation-efforts/">https://www.business-humanrights.org/en/latest-news/penlink-named-as-one-of-the-tech-companies-allegedly-supporting-ices-deportation-efforts/</a></li>
+    <li>Migration Policy Institute, Palantir ImmigrationOS and the “information silos” order: <a href="https://www.migrationpolicy.org/article/trump-ice-data-surveillance">https://www.migrationpolicy.org/article/trump-ice-data-surveillance</a></li>
+    <li>WRAL/CNN, IRS–ICE data deal: <a href="https://www.wral.com/story/doge-is-building-a-master-database-for-immigration-enforcement-sources-say/21977318/">https://www.wral.com/story/doge-is-building-a-master-database-for-immigration-enforcement-sources-say/21977318/</a></li>
+    <li>Privacy International, Facebook emotional contagion study: <a href="https://privacyinternational.org/examples/2145/facebook-study-emotional-contagion-turns-users-subjects">https://privacyinternational.org/examples/2145/facebook-study-emotional-contagion-turns-users-subjects</a></li>
+    <li>MIT Knight Science Journalism, small effect size critique: <a href="https://ksj.mit.edu/tracker-archive/facebook-tried-to-manipulate-user-emotions-for-study-journalists-cite-improper-informed-consent/">https://ksj.mit.edu/tracker-archive/facebook-tried-to-manipulate-user-emotions-for-study-journalists-cite-improper-informed-consent/</a></li>
+    <li>SSRC MediaWell, Guess et al. (Science, 2023) chronological feed study: <a href="https://mediawell.ssrc.org/?p=510998">https://mediawell.ssrc.org/?p=510998</a></li>
+    <li>AP via WTOP, social media addiction verdict (Mar 2026): <a href="https://wtop.com/social-media/2026/03/los-angeles-jury-reaches-verdict-in-landmark-social-media-addiction-case/">https://wtop.com/social-media/2026/03/los-angeles-jury-reaches-verdict-in-landmark-social-media-addiction-case/</a></li>
+    <li>Task &amp; Purpose, Reuters findings on Pentagon anti-vax operation: <a href="https://taskandpurpose.com/news/pentagon-anti-vaccine-disinformation-philippines/">https://taskandpurpose.com/news/pentagon-anti-vaccine-disinformation-philippines/</a></li>
+    <li>The Decoder, Pravda network and NewsGuard chatbot test: <a href="https://the-decoder.com/russian-fake-news-network-floods-western-ai-chatbots-with-millions-of-propaganda-articles/">https://the-decoder.com/russian-fake-news-network-floods-western-ai-chatbots-with-millions-of-propaganda-articles/</a></li>
+    <li>Bulletin of the Atomic Scientists, “LLM grooming”: <a href="https://thebulletin.org/2025/03/russian-networks-flood-the-i">https://thebulletin.org/2025/03/russian-networks-flood-the-i</a></li>
+    <li>CyberInsider, interim scanning rules expired April 2026: <a href="https://cyberinsider.com/eu-now-one-step-away-from-reviving-private-message-scanning-rules/">https://cyberinsider.com/eu-now-one-step-away-from-reviving-private-message-scanning-rules/</a></li>
+  </ul>
+</section>
+
+<footer class="wrap">
+  This page is an explainer, not investigative reporting or financial or legal advice. Dates and figures are from the sources listed; some items, like the exact status of the consumer digital euro, may change after publication. Parts 5 to 9 were added in October 2026. Statuses for Section 702, Chat Control, the digital euro and Canada’s appeal were current as of mid-2026 reporting and may have moved since.
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){
+    e.target.classList.add('in');
+    e.target.querySelectorAll('.fill[data-w]').forEach(f=>f.style.width=f.dataset.w+'%');
+    io.unobserve(e.target);
+  }
+}),{threshold:.2});
+document.querySelectorAll('.reveal,.bar').forEach(el=>io.observe(el));
+const bar=document.getElementById('progress');
+function upd(){const h=document.documentElement;bar.style.width=Math.min(Math.max(h.scrollTop/((h.scrollHeight-h.clientHeight)||1),0),1)*100+'%';}
+addEventListener('scroll',upd,{passive:true});upd();
+</script>
+</body>
+</html>
